@@ -4,7 +4,7 @@ module "instance-practice" {
   # insert required variables here
   ami = var.ami
   instance_type = var.instance_type
-  subnet_id = var.subnet_id
+  subnet_id = aws_subnet.web_subnet.id
 }
 module "vpc-practice" {
   source  = "app.terraform.io/git_practice_ec2/vpc-practice/aws"
